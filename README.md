@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎥 Vidext Video Player
 
-## Getting Started
+- Clone Repo
+- Install dependencies ``` npm install ```
+- Execute ```npm run dev```
+- If want to see ui database execute ```npx drizzle-kit studio``` and open https://local.drizzle.studio
+- First time the project is started, it may be slower than usual, this is because the database is being created.
+- Test it!
 
-First, run the development server:
+## 📝 Requirements
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Functional Requirements
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Video player page. ✔️
+2. There must be an API endpoint that allows the app to retrieve video data. ✔️
+3. After a video is played, an API call must store the play count for that video. ✔️
+4. Utilize Next.js' built-in API routes to handle server-side operations. ✔️
+5. Use TailwindCSS for styling the application with the help of Shadcn for UI interfaces consistent with design requirements. ✔️
+6. Implement tRPC to facilitate type-safe API calls between the client and server. ✔️
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Technical Requirements
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Create a Next.js application from scratch. ✔️
+- Set up TailwindCSS with Next.js and integrate Shadcn components where appropriate. ✔️
+- Design the app with a responsive layout suitable for both desktop and mobile viewports. ✔️
+- Construct tRPC API routes within the Next.js app which exposes at least two endpoints:
+    - One endpoint to retrieve video data (`getVideos`). ✔️
+    - Another endpoint to increment and store the video play count (`incrementPlayCount`). ✔️
+- Use Next.js app routing to navigate between pages and components. ✔️
+- Implement error handling and loading states for API calls. ✔️
+- Write simple documentation in a [README.md](http://readme.md/) file, explaining how to set up and run the application locally. ✔️
 
-## Learn More
+### Bonus Points
 
-To learn more about Next.js, take a look at the following resources:
+- Implement additional features such as video descriptions, or a "like" functionality. ✔️
+- Add authentication to ensure that only authorized users can increment the play count.
+- Fully customizable media player controls. [https://github.com/muxinc/media-chrome] ✔️
+- Good design. ✔️
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Extra points not included
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Use drizzleORM ✔️
