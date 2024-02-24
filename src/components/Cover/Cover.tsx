@@ -10,8 +10,7 @@ const Cover = () => {
       <div className='absolute text-black inset-0 w-full h-full bg-[#0000003b] z-10'></div>
       <div className='container mx-auto text-white w-full h-full z-20 flex justify-center items-end pb-14 '>
         <h1 className='text-5xl drop-shadow-[2px_6px_2px_rgba(0,_0,_0,_0.75)] leading-[3.2rem]'>
-          <strong>Find a new way</strong> to enjoy landscapes with{' '}
-          <strong>Vidext</strong>
+           Generate <strong>amazing videos</strong>{' '}
         </h1>
       </div>
     </div>
