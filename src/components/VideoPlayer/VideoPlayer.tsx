@@ -24,7 +24,6 @@ const VideoPlayer = forwardRef<HTMLVideoElement, VideoPlayerProps>(
         preload='auto'
         ref={ref}
         src={src}
-        loop
         muted
         className='h-full w-full'
         onPlay={handlePlay}

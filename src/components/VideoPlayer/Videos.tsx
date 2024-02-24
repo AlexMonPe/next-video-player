@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import VideoModal from './VideoModal';
 import { serverClient } from '@/app/_trpc/serverClient';
@@ -14,7 +13,7 @@ const Videos = ({ videos }: VideosProps) => {
       {videos && videos?.length > 0 ? (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-20'>
           {videos?.map((video, index) => {
-            return <VideoModal key={index} video={video} />;
+            return <VideoModal key={`video-${index}`} video={video} />;
           })}
         </div>
       ) : (
