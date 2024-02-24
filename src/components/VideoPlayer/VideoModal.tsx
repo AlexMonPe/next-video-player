@@ -52,8 +52,8 @@ export const VideoModal = ({ video }: VideoModalProps) => {
             <DialogTitle className='absolute top-4 left-4 flex flex-col gap-2'>
               <p className="text-sm sm:text-lg">{video.title}</p>
               <div className='flex flex-col'>
-                <span className='text-sm font-normal hidden md:block w-5/6 lg:text-base'>{video.description}</span>
-                <span className='text-sm font-normal text-left lg:text-base'>{playcount} Views</span>
+                <span className='text-sm font-normal hidden md:block lg:text-base'>{video.description}</span>
+                <span className='text-xs sm:text-sm font-normal text-left lg:text-base'>{playcount} Views</span>
               </div>
             </DialogTitle>
           </DialogHeader>
