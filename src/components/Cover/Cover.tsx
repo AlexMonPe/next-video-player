@@ -5,7 +5,7 @@ const Cover = () => {
         backgroundImage: `url(/images/backgrounds/water-bridge.webp)`,
         backgroundPosition: 'center center',
       }}
-      className='min-h-[45rem] h-[45rem] w-screen bg-cover bg-no-repeat relative flex justify-center items-center'
+      className='h-[35rem] 2xl:h-[45rem] w-screen bg-cover bg-no-repeat relative flex justify-center items-center'
     >
       <div className='absolute text-black inset-0 w-full h-full bg-[#0000003b] z-10'></div>
       <div className='container mx-auto text-white w-full h-full z-20 flex justify-center items-end pb-14 '>
