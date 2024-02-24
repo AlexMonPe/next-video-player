@@ -1,17 +1,25 @@
 'use client';
 import React from 'react';
-import { trpc } from '../../app/_trpc/client';
 import VideoModal from './VideoModal';
+import { serverClient } from '@/app/_trpc/serverClient';
+import EmptyVideos from '../EmptyVideos/EmptyVideos';
 
-const Videos = () => {
-  const videos = trpc.getVideos.useQuery();
+type VideosProps = {
+  videos: Awaited<ReturnType<(typeof serverClient)['getVideos']>>;
+};
+
+const Videos = ({ videos }: VideosProps) => {
   return (
     <>
-      {videos.data && videos.data?.length > 0
-        ? videos.data?.map((video, index) => {
+      {videos && videos?.length > 0 ? (
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-20'>
+          {videos?.map((video, index) => {
             return <VideoModal key={index} video={video} />;
-          })
-        : <div>No videos available.</div>}
+          })}
+        </div>
+      ) : (
+        <EmptyVideos />
+      )}
     </>
   );
 };
