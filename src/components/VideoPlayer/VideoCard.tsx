@@ -1,17 +1,9 @@
 'use client';
-import React, { Dispatch, SetStateAction, useEffect, useRef} from 'react';
+import React, { useEffect, useRef} from 'react';
 import VideoPlayer from './VideoPlayer';
 import FavoriteIcon from '../Favorites/FavoriteIcon';
 import { HiOutlineArrowsPointingOut } from "react-icons/hi2";
-import { serverClient } from '@/app/_trpc/serverClient';
-
-
-type VideoCardProps = {
-  video: Awaited<ReturnType<typeof serverClient['getVideos']>>[number];
-  isFavorited: boolean;
-  setIsFavorited: Dispatch<SetStateAction<boolean>>;
-  playcount: number | null
-};
+import { VideoCardProps } from '@/types/videos';
 
 const VideoCard = ({ video, isFavorited, setIsFavorited,playcount }: VideoCardProps) => {
 

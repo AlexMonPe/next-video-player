@@ -12,11 +12,7 @@ import { useState } from 'react';
 import FavoriteIcon from '../Favorites/FavoriteIcon';
 import { CustomControls } from './CustomControls';
 import { useIncrementPlayCount } from '@/hooks/useIncrementPlayCount';
-import { serverClient } from '@/app/_trpc/serverClient';
-
-type VideoModalProps = {
-  video: Awaited<ReturnType<typeof serverClient['getVideos']>>[number];
-};
+import { VideoModalProps } from '@/types/videos';
 
 export const VideoModal = ({ video }: VideoModalProps) => {
 
