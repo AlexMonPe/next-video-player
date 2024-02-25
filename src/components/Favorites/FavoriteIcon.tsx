@@ -1,13 +1,8 @@
 'use client'
-import React, { Dispatch, SetStateAction, useEffect } from 'react';
+import { FavoriteIconProps } from '@/types/videos';
+import React, { useEffect } from 'react';
 import { GrFavorite } from 'react-icons/gr';
 import { MdOutlineFavorite } from 'react-icons/md';
-
-type FavoriteIconProps = {
-  videoId: number;
-  isFavorited: boolean;
-  setIsFavorited: Dispatch<SetStateAction<boolean>>;
-};
 
 const FavoriteIcon = ({ videoId,isFavorited, setIsFavorited }: FavoriteIconProps) => {
 

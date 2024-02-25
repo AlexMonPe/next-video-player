@@ -1,3 +1,4 @@
+import { CustomControlsProps } from '@/types/videos';
 import {
   MediaController,
   MediaControlBar,
@@ -12,11 +13,6 @@ import {
   MediaFullscreenButton,
 } from 'media-chrome/dist/react';
 
-import { ReactNode } from 'react';
-
-type CustomControlsProps = {
-  children: ReactNode;
-};
 export const CustomControls = ({ children }: CustomControlsProps) => {
   return (
     <MediaController className='h-full'>
