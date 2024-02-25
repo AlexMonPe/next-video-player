@@ -4,7 +4,7 @@ interface VideoPlayerProps {
   src: string;
   id: number;
   incrementPlayCount?: (videoId: number, currentPlayCount: number, setPlaycount: any) => void;
-  playcount?: number;
+  playcount?: number | null;
   setPlaycount?: Dispatch<SetStateAction<number | null>>
 }
 
@@ -26,7 +26,7 @@ const VideoPlayer = forwardRef<HTMLVideoElement, VideoPlayerProps>(
         src={src}
         muted
         className='h-full w-full'
-        onPlay={handlePlay}
+        onEnded={handlePlay}
       ></video>
     );
   }
