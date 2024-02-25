@@ -43,7 +43,7 @@ export const VideoModal = ({ video }: VideoModalProps) => {
               src={video.url ?? ''}
               incrementPlayCount={incrementPlayCount}
               id={video.id}
-              playcount={video.playcount ?? 0}
+              playcount={playcount ?? video.playcount}
               setPlaycount={setPlaycount}
             />
           </CustomControls>
