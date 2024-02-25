@@ -1,11 +1,7 @@
 import React from 'react';
 import VideoModal from './VideoModal';
-import { serverClient } from '@/app/_trpc/serverClient';
 import EmptyVideos from '../EmptyVideos/EmptyVideos';
-
-type VideosProps = {
-  videos: Awaited<ReturnType<(typeof serverClient)['getVideos']>>;
-};
+import { VideosProps } from '@/types/videos';
 
 const Videos = ({ videos }: VideosProps) => {
   return (

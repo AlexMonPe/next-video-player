@@ -1,12 +1,5 @@
-import React, { Dispatch, SetStateAction, forwardRef } from 'react';
-
-interface VideoPlayerProps {
-  src: string;
-  id: number;
-  incrementPlayCount?: (videoId: number, currentPlayCount: number, setPlaycount: any) => void;
-  playcount?: number | null;
-  setPlaycount?: Dispatch<SetStateAction<number | null>>
-}
+import { VideoPlayerProps } from '@/types/videos';
+import React, { forwardRef } from 'react';
 
 const VideoPlayer = forwardRef<HTMLVideoElement, VideoPlayerProps>(
   ({ id, src, incrementPlayCount, playcount, setPlaycount }, ref) => {
