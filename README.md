@@ -5,7 +5,19 @@
 - Execute ```npm run dev```
 - If want to see ui database execute ```npx drizzle-kit studio``` and open https://local.drizzle.studio
 - First time the project is started, it may be slower than usual, this is because the database is being created.
-- Test it!
+- Test endpoints:
+    - Get Videos: ```http://localhost:3000/api/trpc/getVideos```
+    - Update playCount:
+      ```http://localhost:3000/api/trpc/incrementPlayCount```
+      Headers:  ```Content-Type: application/json```
+      Body(raw):
+      ```json
+          {
+            "id": 9, (there are ids from 1 to 9)
+            "playcount": 8 (number of views)
+          }
+      ```
+    
 
 ## 📝 Requirements
 
