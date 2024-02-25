@@ -25,7 +25,7 @@
 - Design the app with a responsive layout suitable for both desktop and mobile viewports. ✔️
 - Construct tRPC API routes within the Next.js app which exposes at least two endpoints:
     - One endpoint to retrieve video data (`getVideos`). ✔️
-    - Another endpoint to increment and store the video play count (`incrementPlayCount`). ✔️
+    - Another endpoint to increment and store the video play count (`incrementPlayCount`) "Counter only goes up after de video is played". ✔️
 - Use Next.js app routing to navigate between pages and components. ✔️
 - Implement error handling and loading states for API calls. ✔️
 - Write simple documentation in a [README.md](http://readme.md/) file, explaining how to set up and run the application locally. ✔️
